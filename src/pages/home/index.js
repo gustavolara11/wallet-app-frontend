@@ -1,3 +1,21 @@
+const onLoadFinancesData = async () => {
+  try {
+    const date = "2022-12-15";
+    const email = localStorage.getItem("@WalletApp:userEmail");
+    const result = await fetch(
+      `https://mp-wallet-app-api.herokuapp.com/finances?date=${date}`,
+      {
+        method: "GET",
+        headers: {
+          email: email,
+        },
+      }
+    );
+  } catch (error) {
+    return { error };
+  }
+};
+
 const onLoadUserInfo = () => {
   const email = localStorage.getItem("@WalletApp:userEmail");
   const name = localStorage.getItem("@WalletApp:userName");
@@ -26,4 +44,5 @@ const onLoadUserInfo = () => {
 
 window.onload = () => {
   onLoadUserInfo();
+  onLoadFinancesData();
 };
