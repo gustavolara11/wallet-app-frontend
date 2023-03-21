@@ -42,3 +42,22 @@
   border-radius: 24px;
   background-color: #e4fde1;
 }
+.finance-card-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 105px 122px 48px 122px;
+  box-sizing: border-box;
+}
+.finance-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 140px;
+  border-radius: 24px;
+  background-color: #ffffff;
+}
