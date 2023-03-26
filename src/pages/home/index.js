@@ -27,7 +27,7 @@ const renderFinancesList = (data) => {
 
   const actionText = document.createTextNode("Ação");
   const actionElement = document.createElement("th");
-  actionElement.className = "center";
+  actionElement.className = "right";
   actionElement.appendChild(actionText);
   tableHeader.appendChild(actionElement);
 
@@ -282,6 +282,7 @@ const onCreateFinanceRelease = async (target) => {
     }
     onCloseModal();
     onLoadFinancesData();
+    onLoadCategories();
   } catch (error) {
     alert("Erro ao adicionar novo dado financeiro.");
   }
